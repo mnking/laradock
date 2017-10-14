@@ -4,8 +4,8 @@ MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
 ADD nginx.conf /etc/nginx/
 
-ARG PHP_UPSTREAM_CONTAINER=php-fpm
-ARG PHP_UPSTREAM_PORT=9000
+ARG PHP_UPSTREAM_CONTAINER
+ARG PHP_UPSTREAM_PORT
 
 RUN apk update \
     && apk upgrade \
