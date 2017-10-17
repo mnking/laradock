@@ -70,6 +70,17 @@ RUN if [ ${INSTALL_SOAP} = true ]; then \
 ;fi
 
 #####################################
+# SUPERVISOR:
+#####################################
+
+ARG INSTALL_SUPERVISOR
+
+RUN if [ ${INSTALL_SUPERVISOR} = true ]; then \
+    apt-get update -yqq && \
+    apt-get install -y supervisor \
+;fi
+
+#####################################
 # Set Timezone
 #####################################
 
