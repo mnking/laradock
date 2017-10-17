@@ -408,7 +408,7 @@ RUN if [ ${INSTALL_LARAVEL_ENVOY} = true ]; then \
 #####################################
 # Laravel Installer:
 #####################################
-USER root
+USER laradock
 
 ARG INSTALL_LARAVEL_INSTALLER
 ENV INSTALL_LARAVEL_INSTALLER ${INSTALL_LARAVEL_INSTALLER}
@@ -674,3 +674,5 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+RUN chown -R laradock:laradock /var/www
